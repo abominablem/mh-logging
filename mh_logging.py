@@ -17,6 +17,9 @@ class Logging:
         self.log_trace(*args, **kwargs)
 
     def log_trace(self, parent, function, trace, add = ""):
+        if trace == {}:
+            trace = None
+
         if self.log:
             if isinstance(trace, dict):
                 try:
