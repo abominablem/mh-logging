@@ -128,6 +128,7 @@ def log_class(log_level = "all"):
     # if no log_level provided, assume log_level is "all" and the argument
     # is in fact the function itself.
     inferred_func = None
+    log_level = log_level.lower()
     if not log_level in ["all", "min", "none"]:
         inferred_func = log_level
         log_level = "all"
